@@ -1,65 +1,31 @@
 ---
 layout: page
-title: projects
+title: Research
 permalink: /projects/
-description: A few details about my current research...
+description: Selected peer-reviewed work from the curriculum vitae.
 nav: true
 nav_order: 3
-display_categories: [CSU, External]
-horizontal: false
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="grid">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
+<div class="research-list">
+  <h2>Research interests</h2>
+  <ul class="research-list__interests">
+    <li>Tropical cyclones</li>
+    <li>Predictability and internal variability of the climate</li>
+    <li>Atmospheric water vapor</li>
+    <li>Cloud feedback mechanisms</li>
+    <li>Large-scale fluid dynamics</li>
+    <li>Satellite-based observations of clouds</li>
+    <li>Climate change</li>
+    <li>Development of atmospheric numerical models</li>
+  </ul>
+
+  <h2>Selected research</h2>
+  {% assign research_projects = site.projects | sort: "importance" %}
+  {% for project in research_projects %}
+    <article class="research-list__item">
+      <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+      <p>{{ project.description }}</p>
+    </article>
   {% endfor %}
-
-{% else %}
-
-<!-- Display projects without categories -->
-
-{% assign sorted_projects = site.projects limit:2 | sort: "importance" %}
-
-  <!-- Generate cards for each project -->
-
-{% if page.horizontal %}
-
-  <div class="container">
-    <div class="row row-cols-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="grid">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
 </div>

@@ -1,25 +1,107 @@
 ---
 layout: about
-title: about
+title: Home
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. levi.silvers@colostate.edu
-
+profile_page: true
+description: Levi Silvers, Research Scientist in the Department of Atmospheric Science at Colorado State University.
+subtitle: Research Scientist · Department of Atmospheric Science · Colorado State University
 profile:
-  align: right
   image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>your office number</p>
-    <p>Fort Collins, Co 80523</p>
-
-news: falsa # includes a list of news items
-latest_posts: false # includes a list of the newest posts
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
+  image_circular: false
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [linkname](https://climatekids.nasa.gov/cloud-formation/). Name your picture `prof_pic.jpg` and put it in the `img/` folder.
+<div class="profile-home">
+  <section class="profile-home__hero" aria-labelledby="profile-name">
+    <div class="profile-home__intro">
+      <p class="profile-home__eyebrow">Research Scientist</p>
+      <h1 id="profile-name">Levi Silvers</h1>
+      <p class="profile-home__lead">
+        Department of Atmospheric Science, Colorado State University
+      </p>
+      <p>
+        My research interests include tropical cyclones, climate predictability and internal
+        variability, atmospheric water vapor, cloud feedback mechanisms, and large-scale fluid dynamics.
+      </p>
+      <div class="profile-home__actions">
+        <a class="profile-home__button" href="mailto:{{ site.email }}">Get in touch</a>
+        <a class="profile-home__text-link" href="https://tinyurl.com/ScholarSilvers">Google Scholar <span aria-hidden="true">→</span></a>
+        <a class="profile-home__text-link" href="{{ '/assets/pdf/Levi_Glenn_Silvers_CV.pdf' | relative_url }}" download>Download CV (PDF) <span aria-hidden="true">↓</span></a>
+      </div>
+    </div>
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+    <aside class="profile-home__contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact information</h2>
+      <dl>
+        <dt>Email</dt>
+        <dd><a href="mailto:{{ site.email }}">{{ site.email }}</a></dd>
+        <dt>Department</dt>
+        <dd>Atmospheric Science, Colorado State University</dd>
+        <dt>Address</dt>
+        <dd>Fort Collins, CO 80523</dd>
+        <dt>ORCID</dt>
+        <dd><a href="https://orcid.org/0000-0003-4304-2545">0000-0003-4304-2545</a></dd>
+      </dl>
+      <img
+        class="profile-home__portrait"
+        src="{{ '/assets/img/prof_pic.jpg' | relative_url }}"
+        alt="Portrait of Levi Silvers"
+        loading="eager"
+      >
+    </aside>
+  </section>
 
-Link to your social media connections, too. This theme is set up to use [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your LinkedIn and Google Scholar or just disable all of them.
+  <section class="profile-home__section" aria-labelledby="research-heading">
+    <div class="profile-home__section-heading">
+      <p class="profile-home__eyebrow">Research interests</p>
+      <h2 id="research-heading">Research</h2>
+    </div>
+    <ul class="profile-home__interest-list">
+      <li>Tropical cyclones</li>
+      <li>Climate predictability and internal variability</li>
+      <li>Atmospheric water vapor</li>
+      <li>Cloud feedback mechanisms</li>
+      <li>Large-scale fluid dynamics</li>
+      <li>Satellite-based observations of clouds</li>
+      <li>Climate change</li>
+      <li>Development of atmospheric numerical models</li>
+    </ul>
+  </section>
+
+  <section class="profile-home__section" aria-labelledby="appointments-heading">
+    <div class="profile-home__section-heading">
+      <p class="profile-home__eyebrow">Career</p>
+      <h2 id="appointments-heading">Academic appointments</h2>
+    </div>
+    <ol class="profile-home__timeline">
+      <li><time>2024–Present</time><div><h3>Research Scientist</h3><p>Department of Atmospheric Science, Colorado State University, Fort Collins, CO</p></div></li>
+      <li><time>2019–2024</time><div><h3>Research Scientist</h3><p>School of Marine and Atmospheric Science, Stony Brook University, Stony Brook, NY</p></div></li>
+      <li><time>2015–2019</time><div><h3>Associate Research Scholar</h3><p>Princeton University / Geophysical Fluid Dynamics Laboratory, Princeton, NJ</p></div></li>
+      <li><time>2012–2015</time><div><h3>Post-Doctoral Scientist</h3><p>The Max Planck Institute for Meteorology, Hamburg, Germany</p></div></li>
+    </ol>
+  </section>
+
+  <section class="profile-home__section" aria-labelledby="education-heading">
+    <div class="profile-home__section-heading">
+      <p class="profile-home__eyebrow">Education</p>
+      <h2 id="education-heading">Education</h2>
+    </div>
+    <ul class="profile-home__education-list">
+      <li><time>2011</time><span>Ph.D., Atmospheric Science, Colorado State University</span></li>
+      <li><time>2007</time><span>M.S., Atmospheric Science, Colorado State University</span></li>
+      <li><time>2004</time><span>B.S., Physics, Gordon College; minor in Mathematics</span></li>
+    </ul>
+  </section>
+
+  <section class="profile-home__section" aria-labelledby="publications-heading">
+    <div class="profile-home__section-heading">
+      <p class="profile-home__eyebrow">Peer-reviewed work</p>
+      <h2 id="publications-heading">Selected publications</h2>
+    </div>
+    <div class="profile-home__publication-list">
+      {% bibliography --group_by none --query @*[selected=true]* %}
+    </div>
+    <p class="profile-home__publication-more">
+      <a class="profile-home__text-link" href="{{ '/publications/' | relative_url }}">View publications page <span aria-hidden="true">→</span></a>
+    </p>
+  </section>
+</div>
