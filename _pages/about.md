@@ -19,8 +19,12 @@ profile:
         Department of Atmospheric Science, Colorado State University
       </p>
       <p>
-        My research interests include tropical cyclones, climate predictability and internal
-        variability, atmospheric water vapor, cloud feedback mechanisms, and large-scale fluid dynamics.
+        My current research interests include the influence of the large-scale environment on tropical cyclones and the how various modes of climate 
+        variability such as ENSO and the Madden-Julien Oscillation influence the characteristics of tropical cyclones.  Additionally, I am involved in a different research project that is examining
+        the interactions between the northern and southern hemispheres to balance the hemispheric water and energy budgets.   Becuase I have had the pleasure of working 
+        at multiple laboratories and universities my past reasearch has covered a wide range of topics, most of which are related to the influence of clouds on the Earth's 
+        climate.  This includes the study of climate change, cloud-feedbacks, idealized modeling in the form of radiative-convective equilibrium, and the development of 
+        physics-based numerical models of the Earth system.  
       </p>
       <div class="profile-home__actions">
         <a class="profile-home__button" href="mailto:{{ site.email }}">Get in touch</a>
@@ -57,12 +61,10 @@ profile:
     </div>
     <ul class="profile-home__interest-list">
       <li>Tropical cyclones</li>
-      <li>Climate predictability and internal variability</li>
-      <li>Atmospheric water vapor</li>
+      <li>Climate change and internal variability</li>
+      <li>The role of clouds and water vapor</li>
       <li>Cloud feedback mechanisms</li>
       <li>Large-scale fluid dynamics</li>
-      <li>Satellite-based observations of clouds</li>
-      <li>Climate change</li>
       <li>Development of atmospheric numerical models</li>
     </ul>
   </section>
